@@ -1,19 +1,15 @@
 <template>
   <div id="app">
     <div style="margin-top: 100px;">
-      <pagination style="margin-top: 30px;" :pages="20" :current-page="1" :pre-page-size="5" />
+      <pagination style="margin-top: 30px;" :pages="20" :current-page="1" :per-page-size="5" />
     </div>
   </div>
 </template>
 
 <script>
-// import Pagination from './components/Pagination'
 
 export default {
   name: 'App',
-  components: {
-    // Pagination
-  }
 }
 </script>
 

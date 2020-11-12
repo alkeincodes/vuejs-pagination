@@ -1,7 +1,7 @@
 <template>
   <div class="pagination__container" v-if="pages > 1">
     <div v-click-away class="pagination" >
-      <div class="pagination__first-btn" @click="firstPage" :class="{ disabled : activePage == 1}" v-if="pages > 3">First</div>
+      <div class="pagination__first-btn" @click="firstPage" :class="{ disabled : activePage == 1}" v-if="pages > 3">{{ firstLabel }}</div>
       <div v-if="pageTrays.prevPageNumbers && pageTrays.prevPageNumbers.length > 0" class="pagination__more-option-container">
         <transition name="fade">
           <div class="pagination__more-option--previous" v-if="isMoreOptionPrevOpen">
@@ -58,7 +58,7 @@
           <i></i>
         </div>
       </div>
-      <div class="pagination__last-btn" @click="lastPage" :class="{ disabled : isLastPage}" v-if="pages > 3">Last</div>
+      <div class="pagination__last-btn" @click="lastPage" :class="{ disabled : isLastPage}" v-if="pages > 3">{{ lastLabel }}</div>
     </div>
   </div>
 
@@ -70,20 +70,28 @@
     props: {
       pages: {
         type: Number,
-        default: 20
+        required: true
       },
       currentPage: {
         type: [Number, String],
-        default: 1
+        required: true
       },
       perPageSize: {
         type: Number,
-        default: 5
+        required: true
       },
       hasVueRouter: {
         type: Boolean,
         default: false
-      }
+      },
+      firstLabel: {
+        type: String,
+        default: 'First'
+      },
+      lastLabel: {
+        type: String,
+        default: 'Last'
+      },
     },
     directives: {
       clickAway: {
