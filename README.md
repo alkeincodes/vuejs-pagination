@@ -1,24 +1,26 @@
-# project
+# @alkeincodes/vuejs-pagination
 
-## Project setup
+## Install package
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm install @alkeincodes/vuejs-pagination --save
 ```
 
-### Compiles and minifies for production
+### Register the component globally ES6
 ```
-npm run build
+import Pagination from '@alkeincodes/vuejs-pagination'
+import '@alkeincodes/vuejs-pagination/dist/app.css'
+
+Vue.use(Pagination)
 ```
 
-### Lints and fixes files
+### CDN
+Include the source file.
 ```
-npm run lint
+<!-- use the latest release -->
+<script src="https://unpkg.com/@alkeincodes/vuejs-pagination@latest"></script>
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Usage
+```
+<pagination :pages="20" :current-page="1" :pre-page-size="5" />
+```

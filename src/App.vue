@@ -7,12 +7,12 @@
 </template>
 
 <script>
-import Pagination from './components/Pagination'
+// import Pagination from './components/Pagination'
 
 export default {
   name: 'App',
   components: {
-    Pagination
+    // Pagination
   }
 }
 </script>
