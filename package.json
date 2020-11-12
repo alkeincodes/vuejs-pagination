@@ -1,6 +1,6 @@
 {
   "name": "@alkeincodes/vuejs-pagination",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": false,
   "main": "./dist/app.common.js",
   "scripts": {
@@ -8,6 +8,10 @@
     "build": "vue-cli-service build --target lib --name app ./src/index.js",
     "lint": "vue-cli-service lint"
   },
+  "sideEffects": [
+    "*.vue",
+    "*.css"
+  ],
   "dependencies": {
     "core-js": "^3.6.5",
     "sass": "^1.29.0",

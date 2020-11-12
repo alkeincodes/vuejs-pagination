@@ -1,4 +1,8 @@
 # vuejs-pagination
+a simple pagination component made for VueJS
+
+### See it in action
+<img src="https://raw.githubusercontent.com/lokyoung/vuejs-paginate/master/img/pagination-show.gif" width="550" />
 
 ## Install package
 ```

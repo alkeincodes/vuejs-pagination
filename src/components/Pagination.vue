@@ -1,18 +1,16 @@
 <template>
   <div class="pagination__container" v-if="pages > 1">
-    <div v-click-away class="pagination" >
+    <div v-click-away class="pagination">
       <div class="pagination__first-btn" @click="firstPage" :class="{ disabled : activePage == 1}" v-if="pages > 3">{{ firstLabel }}</div>
       <div v-if="pageTrays.prevPageNumbers && pageTrays.prevPageNumbers.length > 0" class="pagination__more-option-container">
-        <transition name="fade">
-          <div class="pagination__more-option--previous" v-if="isMoreOptionPrevOpen">
-            <div
-              v-for="(prevPage, key) in pageTrays.prevPageNumbers"
-              :key="key"
-              @click="switchPage(prevPage)">
-              {{ prevPage }}
-            </div>
+        <div class="pagination__more-option--previous" v-if="isMoreOptionPrevOpen">
+          <div
+            v-for="(prevPage, key) in pageTrays.prevPageNumbers"
+            :key="key"
+            @click="switchPage(prevPage)">
+            {{ prevPage }}
           </div>
-        </transition>
+        </div>
         <div class="pagination__more-option--btn" @click="isMoreOptionPrevOpen = !isMoreOptionPrevOpen">
           <i></i>
           <i></i>
@@ -42,16 +40,14 @@
         </svg>
       </div>
       <div v-if="pageTrays.nextPageNumbers && pageTrays.nextPageNumbers.length > 0" class="pagination__more-option-container">
-        <transition name="fade">
-          <div class="pagination__more-option--next" v-if="isMoreOptionNextOpen">
-            <div
-              v-for="(nextPage, key) in pageTrays.nextPageNumbers"
-              :key="key"
-              @click="switchPage(nextPage)">
-              {{ nextPage }}
-            </div>
+        <div class="pagination__more-option--next" v-if="isMoreOptionNextOpen">
+          <div
+            v-for="(nextPage, key) in pageTrays.nextPageNumbers"
+            :key="key"
+            @click="switchPage(nextPage)">
+            {{ nextPage }}
           </div>
-        </transition>
+        </div>
         <div class="pagination__more-option--btn" @click="isMoreOptionNextOpen = !isMoreOptionNextOpen">
           <i></i>
           <i></i>
@@ -150,7 +146,7 @@
           this.reloadPagination()
         }
         if (this.hasVueRouter) {
-        this.$router.push({ ...this.$route, query: { ...this.$route.query, page } });
+          this.$router.push({ ...this.$route, query: { ...this.$route.query, page } });
         }
       },
       firstPage() {
