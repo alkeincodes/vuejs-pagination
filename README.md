@@ -2,7 +2,7 @@
 a simple pagination component made for VueJS
 
 ### See it in action
-<img src="https://raw.githubusercontent.com/lokyoung/vuejs-paginate/master/img/pagination-show.gif" width="550" />
+<img src="https://media.giphy.com/media/tqMpuy5dDhpj6axyPL/giphy.gif" width="550" />
 
 ## Install package
 ```
