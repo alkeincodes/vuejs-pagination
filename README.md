@@ -26,7 +26,7 @@ Include the source file.
 
 ### Usage
 ```js
-<pagination :pages="20" :current-page="1" :per-page-size="5" />
+<pagination :pages="20" :current-page="1" :per-page-size="5" @switch-page="myFunction" />
 ```
 
 ### Props
@@ -36,3 +36,6 @@ Include the source file.
 - `current-page`: `Number` | Required | Current highlighted page number
 - `per-page-size`: `Number` | Required | Page number shown
 - `has-vue-router`: `Boolean` | Optional | If you have vue-router installed, this will help you push the current page number in to your route
+
+### Event
+- `switch-page`: triggers after selecting a page
