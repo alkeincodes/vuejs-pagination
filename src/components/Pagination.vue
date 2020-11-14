@@ -2,7 +2,7 @@
   <div class="pagination__container" v-if="pages > 1">
     <div v-click-away class="pagination">
       <div class="pagination__first-btn" @click="firstPage" :class="{ disabled : activePage == 1}" v-if="pages > 3">{{ firstLabel }}</div>
-      <div v-if="pageTrays.prevPageNumbers && pageTrays.prevPageNumbers.length > 0" class="pagination__more-option-container">
+      <div v-if="pageTrays.prevPageNumbers && pageTrays.prevPageNumbers.length > 0 && showTray" class="pagination__more-option-container">
         <div class="pagination__more-option--previous" v-if="isMoreOptionPrevOpen">
           <div
             v-for="(prevPage, key) in pageTrays.prevPageNumbers"
@@ -39,7 +39,7 @@
           </g>
         </svg>
       </div>
-      <div v-if="pageTrays.nextPageNumbers && pageTrays.nextPageNumbers.length > 0" class="pagination__more-option-container">
+      <div v-if="pageTrays.nextPageNumbers && pageTrays.nextPageNumbers.length > 0 && showTray" class="pagination__more-option-container">
         <div class="pagination__more-option--next" v-if="isMoreOptionNextOpen">
           <div
             v-for="(nextPage, key) in pageTrays.nextPageNumbers"
@@ -88,6 +88,10 @@
         type: String,
         default: 'Last'
       },
+      showTray: {
+        type: Boolean,
+        default: true
+      }
     },
     directives: {
       clickAway: {

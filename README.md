@@ -35,6 +35,7 @@ Include the source file.
 - `pages`: `Number` | Required | Total number of pages
 - `current-page`: `Number` | Required | Current highlighted page number
 - `per-page-size`: `Number` | Required | Page number shown
+- `show-tray`: `Boolean` | Optional | Show the Previous and Next Page Trays
 - `has-vue-router`: `Boolean` | Optional | If you have vue-router installed, this will help you push the current page number in to your route
 
 ### Event
